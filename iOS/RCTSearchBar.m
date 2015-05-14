@@ -16,8 +16,9 @@
 - (RCTSearchBar *)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher
 {
   CGRect screenRect = [[UIScreen mainScreen] bounds];
-  if (self = [super initWithFrame:CGRectMake(0, 0, screenRect.size.height, 44)]) {
-//  if (self = [super initWithFrame:CGRectZero]) {
+//  if (self = [super initWithFrame:CGRectMake(0, 0, screenRect.size.height, 44)]) {
+  if (self = [super initWithFrame:CGRectZero]) {
+    
     _eventDispatcher = eventDispatcher;
     self.delegate = self;
   }

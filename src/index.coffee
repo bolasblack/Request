@@ -24,7 +24,6 @@ App = React.createClass(
   render: ->
     <View style={styles.container}>
       <SearchBar placeholder="Search"
-        style={styles.searchBar}
         selectTextOnFocus={true}
         onBlur={@_onBlur}
         onFocus={@_onFocus}
@@ -40,9 +39,6 @@ styles = StyleSheet.create(
     # justifyContent: 'center'
     # alignItems: 'center'
     # backgroundColor: '#000'
-  searchBar:
-    flex: 1
-    height: 44
   searchRow:
     backgroundColor: '#C9C9CE'
     padding: 8

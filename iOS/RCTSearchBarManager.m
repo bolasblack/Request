@@ -22,9 +22,25 @@ RCT_ENUM_CONVERTER(UISearchBarStyle, (@{
 
 RCT_EXPORT_MODULE()
 
-- (UISearchBar *)view
+- (RCTSearchBar *)view
 {
-  return [[RCTSearchBar alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+  RCTSearchBar *searchBar = [[RCTSearchBar alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+  return searchBar;
+}
+
+- (NSDictionary *)constantsToExport
+{
+  RCTSearchBar *searchBar = [[RCTSearchBar alloc] init];
+  [searchBar layoutIfNeeded];
+  
+//  return @{
+//           @"ComponentHeight": @(CGRectGetHeight(searchBar.frame)),
+//           @"ComponentWidth": @(CGRectGetWidth(searchBar.frame))
+//           };
+  return @{
+           @"ComponentHeight": @(searchBar.intrinsicContentSize.height),
+           @"ComponentWidth": @(searchBar.intrinsicContentSize.width)
+           };
 }
 
 #pragma mark - properties

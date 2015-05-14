@@ -1,9 +1,10 @@
 React = require 'react-native'
-{requireNativeComponent} = React
+{requireNativeComponent, StyleSheet, NativeModules} = React
+SearchBarIOSConsts = NativeModules.UIManager.RCTSearchBar.Constants
 
 class SearchBar extends React.Component
   render: ->
-    <RCTSearchBar {...@props} />
+    <RCTSearchBar style={styles.rctSearchBarIOS} {...@props} />
 
   @propTypes:
     selectTextOnFocus: React.PropTypes.bool
@@ -16,5 +17,11 @@ class SearchBar extends React.Component
     onChange: React.PropTypes.func
 
 RCTSearchBar = requireNativeComponent 'RCTSearchBar', SearchBar
+
+styles = StyleSheet.create(
+  rctSearchBarIOS:
+    width: SearchBarIOSConsts.ComponentWidth
+    height: SearchBarIOSConsts.ComponentHeight
+)
 
 module.exports = SearchBar
