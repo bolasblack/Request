@@ -31,7 +31,6 @@ RCT_EXPORT_MODULE()
 - (NSDictionary *)constantsToExport
 {
   RCTSearchBar *searchBar = [[RCTSearchBar alloc] init];
-  [searchBar layoutIfNeeded];
   
 //  return @{
 //           @"ComponentHeight": @(CGRectGetHeight(searchBar.frame)),

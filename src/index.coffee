@@ -39,16 +39,6 @@ styles = StyleSheet.create(
     # justifyContent: 'center'
     # alignItems: 'center'
     # backgroundColor: '#000'
-  searchRow:
-    backgroundColor: '#C9C9CE'
-    padding: 8
-  searchTextInput:
-    backgroundColor: 'white'
-    textAlign: 'center'
-    borderRadius: 5
-    height: 28
-    paddingLeft: 8
-    paddingRight: 8
 )
 
 AppRegistry.registerComponent('Request', => App)

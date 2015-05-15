@@ -4,7 +4,7 @@ SearchBarIOSConsts = NativeModules.UIManager.RCTSearchBar.Constants
 
 class SearchBar extends React.Component
   render: ->
-    <RCTSearchBar style={styles.rctSearchBarIOS} {...@props} />
+    <RCTSearchBar style={{height: SearchBarIOSConsts.ComponentHeight}} {...@props} />
 
   @propTypes:
     selectTextOnFocus: React.PropTypes.bool
